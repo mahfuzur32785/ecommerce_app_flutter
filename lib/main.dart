@@ -1,4 +1,5 @@
-import 'package:ecommerce_app/screen/homepage.dart';
+import 'package:ecommerce_app/custom_things/custom_btm.dart';
+import 'package:ecommerce_app/screen/auth/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: LoginPage(),
     );
   }
 }
