@@ -1,4 +1,7 @@
 import 'package:bottom_bar_page_transition/bottom_bar_page_transition.dart';
+import 'package:ecommerce_app/screen/all_screens/category/category_page.dart';
+import 'package:ecommerce_app/screen/all_screens/order_page.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../screen/all_screens/homepage.dart';
@@ -15,14 +18,17 @@ class _CustomBtmNavBarState extends State<CustomBtmNavBar> {
 
   List _pages = [
     HomePage(),
-    HomePage(),
-    HomePage(),
+    CategoryPage(),
+    OrderPage(),
     HomePage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Ecommerce App'),
+      ),
       body: BottomBarPageTransition(builder: (BuildContext context, int index) {
         return Container(
           child: _pages[_currentIndex],
